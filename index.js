@@ -1,5 +1,12 @@
+// test data
+const testData = require('./test-data');
+const licenses = require('./utils/softwareLicenses.js');
+
+
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
+const { writeFile } = require('./utils/file-utils.js');
 
 
 // TODO: Create an array of questions for user input
@@ -39,7 +46,7 @@ const promptUser = () => {
       // not mandatory
       type: "input",
       name: "installation",
-      message: "Describe the installation process if any: ",
+      message: "Describe the installation process (if any): ",
     },
     {
       // not required
@@ -52,23 +59,24 @@ const promptUser = () => {
       type: "list",
       name: "license",
       message: "Chose the appropriate license for this project: ",
-      choices: [
-          "Apache",
-          "Academic",
-          "GNU",
-          "ISC",
-          "MIT",
-          "Mozilla",
-          "Open"
-      ]
+      // choices: [
+      //     "Apache",
+      //     "Academic",
+      //     "GNU",
+      //     "ISC",
+      //     "MIT",
+      //     "Mozilla",
+      //     "Open"
+      // ]
+      choices: licenses.map(a => a.fullName)
     },
     {
       // required
       type: "input",
-      name: "contributing",
+      name: "contributors",
       message: "Who are the contributors of this projects (Required)?",
-      validate: contributingInput => {
-        if (contributingInput) {
+      validate: contributorsInput => {
+        if (contributorsInput) {
           return true;
         } else {
           console.log('You need to enter at least one project contributor!');
@@ -80,13 +88,7 @@ const promptUser = () => {
       // not required
       type: "input",
       name: "tests",
-      message: "Is there a test included?"
-    },
-    {
-      // not required
-      type: "input",
-      name: "questions",
-      message: "What do I do if I have an issue? "
+      message: "Please explain any testing procedures:"
     },
     {
       // required
@@ -119,4 +121,16 @@ function init() {}
 
 // Function call to initialize app
 promptUser()
-  .then (answers => console.log(answers));
+  .then (answers => generateMarkdown(answers))
+  .then(pageMarkDown => {
+    return writeFile(pageMarkDown);
+  })
+
+//   console.log(generateMarkdown(testData));
+
+// 
+// let pageMarkDown = generateMarkdown(testData);
+// console.log(pageMarkDown);
+// writeFile(pageMarkDown);
+
+  

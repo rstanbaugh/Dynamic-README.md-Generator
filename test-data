@@ -1,0 +1,14 @@
+const testData = {
+	title:	'Weather Dashboard',
+	description: 'Weather Dashboard is a web-base application that allows user to input a location and see the current weather as well as a 5-day forecast.',
+	installation: 'Install "inquiries node package',
+	usage: 'Weather planning',
+	license: 'The Hippocratic License 2.1',
+	contributors: 'Rich Stanbaugh',
+	tests: '',
+	questions: 'Contact on GitHub or eMail',
+	github: 'rstanbaugh',
+	email: 'rich_bootcamp@icloud.com'
+};
+
+module.exports = testData;
