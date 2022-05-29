@@ -53,7 +53,7 @@ const promptUser = () => {
       // not required
       type: "input",
       name: "usage",
-      message: "What is this project usage for?",
+      message: "What is this project usage?",
       default: ""
     },
     {
