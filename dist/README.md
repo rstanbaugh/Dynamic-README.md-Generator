@@ -1,10 +1,10 @@
 
-  <h1 align="center">RunBuddy</h1><br/>
+  <h1 align="center">Weather Dashboard</h1><br/>
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br/><br/>
+  [![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) <br/><br/>
 
   ## Description
-  A website that offers fitness training services and generates leads. <br/><br/>
+  A web application for current and forecast weather <br/><br/>
 
   ## Table of Contents
   - [Description](#description)
@@ -16,26 +16,26 @@
   - [Questions](#questions)
 
   ## Installation
-  Run npm install from the applicaiton directory to install all dependent modules. <br/><br/>
+  n/a <br/><br/>
 
   ## Usage
-  Supporting athletes and coaches with common interested to meet online <br/><br/>
+  for weather planning <br/><br/>
 
   ## Software License
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br/>
-  This software is licensed under the "The MIT License" license.
-  https://opensource.org/licenses/MIT <br/><br/>
+  [![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) <br/>
+  This software is licensed under the "Apache 2.0 License" license.
+  https://opensource.org/licenses/Apache-2.0 <br/><br/>
 
   ## Contributors
-  Rich Stanbaugh<br/>Loki the Cat<br/>Bootcamp starter code <br/><br/>
+  Rich Stanbaugh<br/>Loki the Cat <br/><br/>
 
   ## Testing
-  Standard testing <br/><br/>
+  standard <br/><br/>
 
   ## Questions
   If you  hvae questions, you can:
   - :eyes: Find me on GitHub: [rstanbaugh](https://github.com/rstanbaugh), or<br />
-  - :email: Email me: rich_bootcamp@icloud.com<br /><br />
+  - :email: Email me: rich_bootcamp@iclould.com<br /><br />
 
   _This README was generated with :heart: by [README-generator](https://github.com/rstanbaugh/README-Generator) :fire: :fire:_
 
