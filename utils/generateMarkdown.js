@@ -3,7 +3,7 @@ const licenses = require('./softwareLicenses.js');
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
-  console.log(data)
+  // console.log(data)
 
   let licenseBadge = licenses.find(object => {
     return object.fullName === data.license;
@@ -34,7 +34,7 @@ const generateMarkdown = data => {
 
   ## Software License
   ${licenseBadge.badge} <br/>
-  This software is licensed under the "${licenseBadge.fullName}" license.<br/>
+  This software is licensed under the "${licenseBadge.fullName}" license.
   ${licenseBadge.link} <br/><br/>
 
   ## Contributors

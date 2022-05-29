@@ -1,10 +1,12 @@
 
-  <h1 align="center">runbuddy</h1><br/>
+  <h1 align="center">README Generator</h1><br/>
 
-  [![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) <br/><br/>
+  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) <br/><br/>
+
+  ![README Generator](../src/README%20Generator.png)
 
   ## Description
-  sdsfsdf <br/><br/>
+  A command-line application that dynamically generates a professional README.md file from a user's input. <br/><br/>
 
   ## Table of Contents
   - [Description](#description)
@@ -16,26 +18,25 @@
   - [Questions](#questions)
 
   ## Installation
-   <br/><br/>
+  Run npm install from the application directory to install all dependencies. <br/><br/>
 
   ## Usage
-   <br/><br/>
+  Depends on the NPM Inquirer package. <br/><br/>
 
   ## Software License
-  [![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) <br/>
-  This software is licensed under the "Apache 2.0 License" license.<br/>
-  https://opensource.org/licenses/Apache-2.0 <br/><br/>
+  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) <br/>
+  This software is licensed under the "The Unlicense" license.<br/>
+   <br/>
 
   ## Contributors
-  Rich S <br/><br/>
+  Rich Stanbaugh<br/>Bootcamp Spot starter code <br/><br/>
 
   ## Testing
-  dfs <br/><br/>
 
   ## Questions
   If you  hvae questions, you can:
-  - :eyes: Find me on GitHub: [fsd](https://github.com/fsd), or<br />
-  - :email: Email me: sdf<br /><br />
+  - :eyes: Find me on GitHub: [rstanbaugh](https://github.com/rstanbaugh), or<br />
+  - :email: Email me: rich_bootcamp@icloud.com<br /><br />
 
   _This README was generated with :heart: by [README-generator](https://github.com/rstanbaugh/README-Generator) :fire: :fire:_
 
