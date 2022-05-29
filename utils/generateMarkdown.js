@@ -1,21 +1,10 @@
 // include the license array of objects
 const licenses = require('./softwareLicenses.js');
 
-
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
-  // TODO: Create a function that returns a license badge based on which license is passed in
-  // If there is no license, return an empty string
-  
+  console.log(data)
+
   let licenseBadge = licenses.find(object => {
     return object.fullName === data.license;
   });
@@ -49,7 +38,7 @@ const generateMarkdown = data => {
   ${licenseBadge.link} <br/><br/>
 
   ## Contributors
-  ${data.contributors} <br/><br/>
+  ${data.contributors.toString().replaceAll(",","<br/>")} <br/><br/>
 
   ## Testing
   ${data.tests} <br/><br/>
@@ -63,10 +52,5 @@ const generateMarkdown = data => {
 
 
 `;
-// console.log("license = ",licenses.find(object => {
-//   return object.name ===data.license;
-// }));
-
 }
-// console.log(licenses);
 module.exports = generateMarkdown;

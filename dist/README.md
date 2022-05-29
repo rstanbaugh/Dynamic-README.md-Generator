@@ -1,10 +1,10 @@
 
-  <h1 align="center">sdgsd</h1><br/>
+  <h1 align="center">runbuddy</h1><br/>
 
   [![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) <br/><br/>
 
   ## Description
-  sdgs <br/><br/>
+  sdsfsdf <br/><br/>
 
   ## Table of Contents
   - [Description](#description)
@@ -27,15 +27,15 @@
   https://opensource.org/licenses/Apache-2.0 <br/><br/>
 
   ## Contributors
-  dsgsd <br/><br/>
+  Rich S <br/><br/>
 
   ## Testing
-   <br/><br/>
+  dfs <br/><br/>
 
   ## Questions
   If you  hvae questions, you can:
-  - :eyes: Find me on GitHub: [dg](https://github.com/dg), or<br />
-  - :email: Email me: <br /><br />
+  - :eyes: Find me on GitHub: [fsd](https://github.com/fsd), or<br />
+  - :email: Email me: sdf<br /><br />
 
   _This README was generated with :heart: by [README-generator](https://github.com/rstanbaugh/README-Generator) :fire: :fire:_
 

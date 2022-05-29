@@ -4,7 +4,7 @@ const testData = {
 	installation: 'Install "inquiries node package',
 	usage: 'Weather planning',
 	license: 'The Hippocratic License 2.1',
-	contributors: 'Rich Stanbaugh',
+	contributors: 'Rich Stanbaugh', 
 	tests: '',
 	questions: 'Contact on GitHub or eMail',
 	github: 'rstanbaugh',

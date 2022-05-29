@@ -47,42 +47,21 @@ const promptUser = () => {
       type: "input",
       name: "installation",
       message: "Describe the installation process (if any): ",
+      default: ""
     },
     {
       // not required
       type: "input",
       name: "usage",
-      message: "What is this project usage for?"
+      message: "What is this project usage for?",
+      default: ""
     },
     {
       // not required
       type: "list",
       name: "license",
       message: "Chose the appropriate license for this project: ",
-      // choices: [
-      //     "Apache",
-      //     "Academic",
-      //     "GNU",
-      //     "ISC",
-      //     "MIT",
-      //     "Mozilla",
-      //     "Open"
-      // ]
       choices: licenses.map(a => a.fullName)
-    },
-    {
-      // required
-      type: "input",
-      name: "contributors",
-      message: "Who are the contributors of this projects (Required)?",
-      validate: contributorsInput => {
-        if (contributorsInput) {
-          return true;
-        } else {
-          console.log('You need to enter at least one project contributor!');
-          return false;
-        }
-      }
     },
     {
       // not required
@@ -113,6 +92,52 @@ const promptUser = () => {
   ]);
 };
 
+const propmtContributor = answers => {
+  console.log(`
+=================
+Add Project contributors
+=================
+`);
+console.log('answers.contributors',answers.contributors);
+  // If there's no 'projects' array property, create one
+  if (!answers.contributors) {
+    answers.contributors = [];
+  }
+  return inquirer
+    .prompt([
+      {
+        // required
+        type: "input",
+        name: "contributors",
+        message: "Who are the contributors of this projects (Required)?",
+        validate: contributorsInput => {
+          if (contributorsInput) {
+            return true;
+          } else {
+            console.log('You need to enter at least one project contributor!');
+            return false;
+          }
+        }
+      },
+      {
+        type: 'confirm',
+        name: 'confirmAddContributor',
+        message: 'Would you like to enter another contributor?',
+        default: false
+      }
+    ])
+    .then(contributorData => {
+      // let name = contributorData.contributors;
+      answers.contributors.push(contributorData.contributors);
+      
+      if (contributorData.confirmAddContributor) {
+        return propmtContributor(answers);
+      } else {
+        return answers;
+      }
+    });
+};
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
@@ -121,7 +146,8 @@ function init() {}
 
 // Function call to initialize app
 promptUser()
-  .then (answers => generateMarkdown(answers))
+  .then (answers => propmtContributor(answers))
+  .then (projectInfo => generateMarkdown(projectInfo))
   .then(pageMarkDown => {
     return writeFile(pageMarkDown);
   })
